@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://sprites/background-day.png" type="Texture" id=1]
 [ext_resource path="res://sprites/yellowbird-downflap.png" type="Texture" id=2]
@@ -8,7 +8,25 @@
 [ext_resource path="res://tuberia.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Base.tscn" type="PackedScene" id=7]
 [ext_resource path="res://sprites/base.png" type="Texture" id=8]
-[ext_resource path="res://final.gd" type="Script" id=9]
+
+[sub_resource type="GDScript" id=8]
+script/source = "extends Node2D
+
+
+# Declare member variables here. Examples:
+# var a = 2
+# var b = \"text\"
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+#func _process(delta):
+#	pass
+"
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -24,10 +42,17 @@ radius = 13.0
 [sub_resource type="RectangleShape2D" id=6]
 extents = Vector2( 15.5, 140.5 )
 
+[sub_resource type="GDScript" id=7]
+script/source = "extends CollisionShape2D
+
+
+"
+
 [sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 168, 56 )
 
 [node name="FlappyBird" type="Node2D"]
+script = SubResource( 8 )
 
 [node name="fons" type="Node2D" parent="."]
 
@@ -53,7 +78,7 @@ texture = ExtResource( 1 )
 
 [node name="ocell" type="RigidBody2D" parent="."]
 position = Vector2( 54, 192 )
-gravity_scale = 7.0
+gravity_scale = 8.0
 script = ExtResource( 5 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="ocell"]
@@ -240,12 +265,183 @@ position = Vector2( 9900, 98 )
 [node name="tuberia57" parent="Tuberies" instance=ExtResource( 6 )]
 position = Vector2( 10080, 40 )
 
-[node name="AreaFinal" type="Area2D" parent="Tuberies/tuberia57"]
+[node name="tuberia58" parent="Tuberies" instance=ExtResource( 6 )]
+position = Vector2( 10262, 3 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Tuberies/tuberia57/AreaFinal"]
+[node name="tuberia59" parent="Tuberies" instance=ExtResource( 6 )]
+position = Vector2( 10442, -96 )
+
+[node name="tuberia60" parent="Tuberies" instance=ExtResource( 6 )]
+position = Vector2( 10622, -25 )
+
+[node name="tuberia61" parent="Tuberies" instance=ExtResource( 6 )]
+position = Vector2( 10802, 13 )
+
+[node name="tuberia62" parent="Tuberies" instance=ExtResource( 6 )]
+position = Vector2( 10982, -87 )
+
+[node name="tuberia63" parent="Tuberies" instance=ExtResource( 6 )]
+position = Vector2( 11162, 72 )
+
+[node name="tuberia64" parent="Tuberies" instance=ExtResource( 6 )]
+position = Vector2( 11342, 39 )
+
+[node name="tuberia65" parent="Tuberies" instance=ExtResource( 6 )]
+position = Vector2( 11522, 171 )
+
+[node name="tuberia66" parent="Tuberies" instance=ExtResource( 6 )]
+position = Vector2( 11702, -9 )
+
+[node name="tuberia67" parent="Tuberies" instance=ExtResource( 6 )]
+position = Vector2( 11882, 156 )
+
+[node name="tuberia68" parent="Tuberies" instance=ExtResource( 6 )]
+position = Vector2( 12062, 107 )
+
+[node name="tuberia69" parent="Tuberies" instance=ExtResource( 6 )]
+position = Vector2( 12242, -78 )
+
+[node name="tuberia70" parent="Tuberies" instance=ExtResource( 6 )]
+position = Vector2( 12422, 68 )
+
+[node name="tuberia71" parent="Tuberies" instance=ExtResource( 6 )]
+position = Vector2( 12602, 109 )
+
+[node name="tuberia72" parent="Tuberies" instance=ExtResource( 6 )]
+position = Vector2( 12782, 157 )
+
+[node name="tuberia73" parent="Tuberies" instance=ExtResource( 6 )]
+position = Vector2( 12962, 81 )
+
+[node name="tuberia74" parent="Tuberies" instance=ExtResource( 6 )]
+position = Vector2( 13142, 149 )
+
+[node name="tuberia75" parent="Tuberies" instance=ExtResource( 6 )]
+position = Vector2( 13322, -24 )
+
+[node name="tuberia76" parent="Tuberies" instance=ExtResource( 6 )]
+position = Vector2( 13502, -117 )
+
+[node name="tuberia77" parent="Tuberies" instance=ExtResource( 6 )]
+position = Vector2( 13682, 58 )
+
+[node name="tuberia78" parent="Tuberies" instance=ExtResource( 6 )]
+position = Vector2( 13862, -14 )
+
+[node name="tuberia79" parent="Tuberies" instance=ExtResource( 6 )]
+position = Vector2( 14042, 86 )
+
+[node name="tuberia80" parent="Tuberies" instance=ExtResource( 6 )]
+position = Vector2( 14222, -55 )
+
+[node name="tuberia81" parent="Tuberies" instance=ExtResource( 6 )]
+position = Vector2( 14402, -11 )
+
+[node name="tuberia82" parent="Tuberies" instance=ExtResource( 6 )]
+position = Vector2( 14582, 119 )
+
+[node name="tuberia83" parent="Tuberies" instance=ExtResource( 6 )]
+position = Vector2( 14762, -81 )
+
+[node name="tuberia84" parent="Tuberies" instance=ExtResource( 6 )]
+position = Vector2( 14942, 114 )
+
+[node name="tuberia85" parent="Tuberies" instance=ExtResource( 6 )]
+position = Vector2( 15122, 20 )
+
+[node name="tuberia86" parent="Tuberies" instance=ExtResource( 6 )]
+position = Vector2( 15302, 64 )
+
+[node name="tuberia87" parent="Tuberies" instance=ExtResource( 6 )]
+position = Vector2( 15482, 129 )
+
+[node name="tuberia88" parent="Tuberies" instance=ExtResource( 6 )]
+position = Vector2( 15662, -113 )
+
+[node name="tuberia89" parent="Tuberies" instance=ExtResource( 6 )]
+position = Vector2( 15842, -129 )
+
+[node name="tuberia90" parent="Tuberies" instance=ExtResource( 6 )]
+position = Vector2( 16022, -37 )
+
+[node name="tuberia91" parent="Tuberies" instance=ExtResource( 6 )]
+position = Vector2( 16202, -115 )
+
+[node name="tuberia92" parent="Tuberies" instance=ExtResource( 6 )]
+position = Vector2( 16382, -32 )
+
+[node name="tuberia93" parent="Tuberies" instance=ExtResource( 6 )]
+position = Vector2( 16562, 89 )
+
+[node name="tuberia94" parent="Tuberies" instance=ExtResource( 6 )]
+position = Vector2( 16742, 49 )
+
+[node name="tuberia95" parent="Tuberies" instance=ExtResource( 6 )]
+position = Vector2( 16922, -35 )
+
+[node name="tuberia96" parent="Tuberies" instance=ExtResource( 6 )]
+position = Vector2( 17102, -1 )
+
+[node name="tuberia97" parent="Tuberies" instance=ExtResource( 6 )]
+position = Vector2( 17282, -85 )
+
+[node name="tuberia98" parent="Tuberies" instance=ExtResource( 6 )]
+position = Vector2( 17462, 85 )
+
+[node name="tuberia99" parent="Tuberies" instance=ExtResource( 6 )]
+position = Vector2( 17642, 143 )
+
+[node name="tuberia100" parent="Tuberies" instance=ExtResource( 6 )]
+position = Vector2( 17822, -11 )
+
+[node name="tuberia101" parent="Tuberies" instance=ExtResource( 6 )]
+position = Vector2( 18002, 89 )
+
+[node name="tuberia102" parent="Tuberies" instance=ExtResource( 6 )]
+position = Vector2( 18182, -93 )
+
+[node name="tuberia103" parent="Tuberies" instance=ExtResource( 6 )]
+position = Vector2( 18362, 119 )
+
+[node name="tuberia104" parent="Tuberies" instance=ExtResource( 6 )]
+position = Vector2( 18542, -93 )
+
+[node name="tuberia105" parent="Tuberies" instance=ExtResource( 6 )]
+position = Vector2( 18722, 73 )
+
+[node name="tuberia106" parent="Tuberies" instance=ExtResource( 6 )]
+position = Vector2( 18902, 115 )
+
+[node name="tuberia107" parent="Tuberies" instance=ExtResource( 6 )]
+position = Vector2( 19082, 25 )
+
+[node name="tuberia108" parent="Tuberies" instance=ExtResource( 6 )]
+position = Vector2( 19262, 129 )
+
+[node name="tuberia109" parent="Tuberies" instance=ExtResource( 6 )]
+position = Vector2( 19442, 89 )
+
+[node name="tuberia110" parent="Tuberies" instance=ExtResource( 6 )]
+position = Vector2( 19622, -47 )
+
+[node name="tuberia111" parent="Tuberies" instance=ExtResource( 6 )]
+position = Vector2( 19802, -1 )
+
+[node name="tuberia112" parent="Tuberies" instance=ExtResource( 6 )]
+position = Vector2( 19982, -81 )
+
+[node name="tuberia113" parent="Tuberies" instance=ExtResource( 6 )]
+position = Vector2( 20162, 101 )
+
+[node name="tuberia114" parent="Tuberies" instance=ExtResource( 6 )]
+position = Vector2( 20342, 43 )
+
+[node name="AreaFinal" type="Area2D" parent="Tuberies/tuberia114"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tuberies/tuberia114/AreaFinal"]
 position = Vector2( 478.5, 225.5 )
 shape = SubResource( 6 )
-script = ExtResource( 9 )
+script = SubResource( 7 )
 
 [node name="Bases" type="Node2D" parent="."]
 
@@ -286,8 +482,9 @@ shape = SubResource( 5 )
 
 [connection signal="tree_entered" from="ocell" to="Tuberies/tuberia" method="_on_ocell_tree_entered"]
 [connection signal="tree_entered" from="Tuberies/tuberia" to="ocell" method="_on_tuberia_tree_entered"]
-[connection signal="body_entered" from="Tuberies/tuberia57/AreaFinal" to="ocell" method="_on_AreaFinal_body_entered"]
-[connection signal="body_entered" from="Tuberies/tuberia57/AreaFinal" to="ocell" method="_on_Area2D_body_entered"]
+[connection signal="tree_entered" from="Tuberies/tuberia58" to="ocell" method="_on_tuberia_tree_entered"]
+[connection signal="body_entered" from="Tuberies/tuberia114/AreaFinal" to="ocell" method="_on_AreaFinal_body_entered"]
+[connection signal="body_entered" from="Tuberies/tuberia114/AreaFinal" to="ocell" method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="Bases/Base/Area2D" to="ocell" method="_on_Area2D_body_entered"]
 
 [editable path="Bases/Base"]
