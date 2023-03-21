@@ -116,7 +116,7 @@ position = Vector2( 900, 69 )
 position = Vector2( 1080, 36 )
 
 [node name="tuberia8" parent="Tuberies" instance=ExtResource( 6 )]
-position = Vector2( 1260, 168 )
+position = Vector2( 1258, 154 )
 
 [node name="tuberia9" parent="Tuberies" instance=ExtResource( 6 )]
 position = Vector2( 1440, -12 )
@@ -287,7 +287,7 @@ position = Vector2( 11162, 72 )
 position = Vector2( 11342, 39 )
 
 [node name="tuberia65" parent="Tuberies" instance=ExtResource( 6 )]
-position = Vector2( 11522, 171 )
+position = Vector2( 11522, 155 )
 
 [node name="tuberia66" parent="Tuberies" instance=ExtResource( 6 )]
 position = Vector2( 11702, -9 )
@@ -483,8 +483,8 @@ shape = SubResource( 5 )
 [connection signal="tree_entered" from="ocell" to="Tuberies/tuberia" method="_on_ocell_tree_entered"]
 [connection signal="tree_entered" from="Tuberies/tuberia" to="ocell" method="_on_tuberia_tree_entered"]
 [connection signal="tree_entered" from="Tuberies/tuberia58" to="ocell" method="_on_tuberia_tree_entered"]
-[connection signal="body_entered" from="Tuberies/tuberia114/AreaFinal" to="ocell" method="_on_AreaFinal_body_entered"]
 [connection signal="body_entered" from="Tuberies/tuberia114/AreaFinal" to="ocell" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Tuberies/tuberia114/AreaFinal" to="ocell" method="_on_AreaFinal_body_entered"]
 [connection signal="body_entered" from="Bases/Base/Area2D" to="ocell" method="_on_Area2D_body_entered"]
 
 [editable path="Bases/Base"]
